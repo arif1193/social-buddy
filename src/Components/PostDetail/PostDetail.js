@@ -12,7 +12,7 @@ const PostDetail = () => {
                 .then(res => res.json())
                 .then(data => setPost(data));
 
-    }, [])
+    }, [id])
 
     useEffect (() => {
         const url = `https://jsonplaceholder.typicode.com/comments?postId=${id}`;
@@ -20,7 +20,7 @@ const PostDetail = () => {
         .then(res => res.json())
         .then(data => setComments(data))
 
-    },[])
+    },[id])
     return (
         <div>
             <h3>This is post Details:{id}</h3>
